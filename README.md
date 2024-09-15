@@ -30,5 +30,4 @@ Circle your wrist and slightly rotate your hand. Avoid excessive rotation.
 ![Hand Signs Instruction](image.png)
 
 ## Credits
-
-[text](https://youtu.be/MJCSjXepaAM?si=fnUC_G2CNiA_KcuO)
+Special thanks to this [video](https://youtu.be/MJCSjXepaAM?si=fnUC_G2CNiA_KcuO).
