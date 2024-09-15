@@ -8,8 +8,8 @@ if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
 
 number_of_classes = 3
-dataset_sizes = [50, 50, 50, 50]  #total=200
-test_modes = ["Left Hand Normal", "Right Hand Normal", "Rotating Right Hand", "Rotating Left Hand"]
+dataset_sizes = [100, 100]  #total=200
+test_modes = ["Normal", "Rotating"]
 
 cap = cv2.VideoCapture(0)
 for j in range(number_of_classes):
@@ -24,7 +24,7 @@ for j in range(number_of_classes):
             ret, frame = cap.read()
             cv2.putText(frame, f'Ready? Press "Q" ! :) Sign #{j}', (100, 80), cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 0, 0), 3,
                         cv2.LINE_AA)
-            cv2.putText(frame, f'{m+1}/4: {mode}', (100, 130), cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 0, 0), 3,
+            cv2.putText(frame, f'{m+1}/{len(test_modes)}: {mode}', (100, 130), cv2.FONT_HERSHEY_SIMPLEX, 1.3, (0, 0, 0), 3,
                         cv2.LINE_AA)
             cv2.imshow('frame', frame)
             if cv2.waitKey(25) == ord('q'):
